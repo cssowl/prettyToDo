@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Diphylleia', serif;
+}
+
+:root {
+    --dark:#424B54;
+    --notasdark: #222;
+    --light: #F5F1E3;
+    --pink:#E36588;
+    --purple: #B6BAF6;
+    --blue: #5398BE;
+    --notwhite: #F5E9E2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: var(--light);
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--blue);
+}
+
+#new-task {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--notasdark);
+    padding: 0.5rem;
+    width: 400px;
+    border-radius: 0.15rem;
+    margin-right: 1rem;
+    color: var(--notwhite);
+    font-size: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#new-task-input::placeholder {
+    color: var(--notwhite);
+}
+
+#new-task-submit {
+    color: var(--notasdark);
+    font-size: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 0.25rem;
+}
+
+.task-list h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--notasdark);
+    padding: 0.5rem;
+    border-radius: 0.15rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content .text {
+    color: var(--notwhite);
+    font-size: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--notwhite);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    color: var(--purple);
+}
+
+.task .actions .delete {
+    color: var(--pink);
+}
